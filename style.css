@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(88, 88, 88, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+h2 {
+  color: #007bff;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #f8f9fa;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+select.form-control,
+input.form-control {
+  border-radius: 5px;
+}
+
+.transaction-history {
+  border: 2px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.transaction-card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.transaction-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.income-card {
+  background-color: #d4edda;
+}
+
+.outcome-card {
+  background-color: #f8d7da;
+}
+
+.income {
+  color: green;
+  font-size: 20px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.outcome {
+  color: red;
+  font-size: 20px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.accountBalance {
+  font-size: 30px;
+  /* margin-left: 5px; */
+}
+
+#welcomeMsg {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}

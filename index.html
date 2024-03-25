@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barclays</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbarContainer">
+      <a class="navbar-brand" href="#">BARCLAYS</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <a class="nav-link" href="#" onclick="showMain()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showIncome()">Income</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showOutcome()">Outcome</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showAbout()">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="container-card">
+        <div id="loginPage">
+          <h2 class="text-center">Welcome to Barclays</h2>
+          <img
+            width="10%"
+            style="
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 50px;
+              margin-top: 50px;
+            "
+            src="logo.png"
+            class="img-fluid rounded-top"
+            alt=""
+          />
+
+          <p class="text-center">Please login to access your account.</p>
+          <form id="loginForm" class="text-center">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container-card" id="mainPage" style="display: none">
+        <h2 id="welcomeMsg" class="text-center"></h2>
+        <p class="accountBalance text-center">
+          Account Balance: $<span id="accountBalance">0</span>
+        </p>
+        <div class="transaction-history" id="transactionHistory">
+          <h3 class="text-center" style="font-size: 20px; font-weight: bold">
+            Transaction History
+          </h3>
+          <!-- Transaction history items will be appended here -->
+        </div>
+      </div>
+
+      <div class="container-card" id="incomePage" style="display: none">
+        <h2>Income Form</h2>
+        <form id="incomeForm">
+          <div class="form-group">
+            <label for="incomeName">Transaction Name:</label>
+            <input type="text" class="form-control" id="incomeName" required />
+          </div>
+          <div class="form-group">
+            <label for="incomeNominal">Nominal:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="incomeNominal"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="container-card" id="outcomePage" style="display: none">
+        <h2>Outcome Form</h2>
+        <form id="outcomeForm">
+          <div class="form-group">
+            <label for="outcomeName">Transaction Name:</label>
+            <input type="text" class="form-control" id="outcomeName" required />
+          </div>
+          <div class="form-group">
+            <label for="outcomeNominal">Nominal:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="outcomeNominal"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="outcomeType">Type:</label>
+            <select class="form-control" id="outcomeType">
+              <option value="Food">Food</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Education">Education</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="container-card" id="aboutPage" style="display: none">
+        <h2>About Us</h2>
+        <p>
+          Just a simple app to track your income and outcome. Made by Mochamad
+          Daffa, Calvin Leo, Gabriel Imanullah, Alvin Xavier.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
